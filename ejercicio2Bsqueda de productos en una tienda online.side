@@ -1,0 +1,129 @@
+{
+  "id": "79079268-882c-4a2b-8dd4-9f061222e509",
+  "version": "2.0",
+  "name": "ejercicio2:Búsqueda de productos en una tienda online",
+  "url": "https://automationexercise.com",
+  "tests": [{
+    "id": "1171fb0f-22cf-462e-b1cb-a0545b1de2c6",
+    "name": "Ejercicio2",
+    "commands": [{
+      "id": "c35e6dc3-62d1-46fb-9089-0ee08607f659",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7dc47dd8-62ad-454d-a970-dfe65af1bec6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "777x718",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "86e43acb-df1c-451a-a489-9e04ef0c7f86",
+      "comment": "",
+      "command": "click",
+      "target": "linkText= Products",
+      "targets": [
+        ["linkText= Products", "linkText"],
+        ["css=.navbar-nav > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//header[@id='header']/div/div/div/div[2]/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/products')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Products')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bad2ee8c-aea7-44fd-b37d-6a1ce7b50d36",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dfe985bb-4793-435e-8e0b-636144b5f1dc",
+      "comment": "",
+      "command": "click",
+      "target": "id=search_product",
+      "targets": [
+        ["id=search_product", "id"],
+        ["name=search", "name"],
+        ["css=#search_product", "css:finder"],
+        ["xpath=//input[@id='search_product']", "xpath:attributes"],
+        ["xpath=//section[@id='advertisement']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8254399-f96d-4a7d-9b4c-b57e355089f6",
+      "comment": "",
+      "command": "type",
+      "target": "id=search_product",
+      "targets": [
+        ["id=search_product", "id"],
+        ["name=search", "name"],
+        ["css=#search_product", "css:finder"],
+        ["xpath=//input[@id='search_product']", "xpath:attributes"],
+        ["xpath=//section[@id='advertisement']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "pure"
+    }, {
+      "id": "d84625c6-8a9f-4b5c-91c0-d9eaf2bc2fb6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-search",
+      "targets": [
+        ["css=.fa-search", "css:finder"],
+        ["xpath=//button[@id='submit_search']/i", "xpath:idRelative"],
+        ["xpath=//button/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3dabe21a-ee2e-4734-b2ad-995b03e5aeb7",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,95)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9feb78d3-12d3-49b2-a80c-583165e75918",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1552)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa3f318d-510f-4c2e-901d-cd9fb0dad96d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-4:nth-child(3) .overlay-content",
+      "targets": [
+        ["css=.col-sm-4:nth-child(3) .overlay-content", "css:finder"],
+        ["xpath=//div[2]/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "486f95c7-d12f-4a64-abef-64b884a93b43",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col-sm-4:nth-child(3) .product-overlay h2",
+      "targets": [
+        ["css=.col-sm-4:nth-child(3) .product-overlay h2", "css:finder"],
+        ["xpath=//div[2]/div/div/div[2]/div/h2", "xpath:position"]
+      ],
+      "value": "Rs. 1299"
+    }]
+  }],
+  "suites": [{
+    "id": "fbce945b-db6e-4098-92c0-9a74e912bb2d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1171fb0f-22cf-462e-b1cb-a0545b1de2c6"]
+  }],
+  "urls": ["https://automationexercise.com/"],
+  "plugins": []
+}

@@ -1,0 +1,96 @@
+{
+  "id": "dc1019c9-1026-42bf-82c8-35a91f912907",
+  "version": "2.0",
+  "name": "ejercicio1: verificacion del formulario de contacto",
+  "url": "https://www.w3schools.com",
+  "tests": [{
+    "id": "19371c14-0886-4f92-b567-e9f5910cdf87",
+    "name": "Ejercicio1",
+    "commands": [{
+      "id": "b926a169-07b6-4556-984d-eae9c1466010",
+      "comment": "",
+      "command": "open",
+      "target": "/html/html_forms.asp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22eb1e2f-bae0-49df-9d4c-878d98b86dff",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "958x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d410d088-718a-4c33-8c3f-9a3017e23fd4",
+      "comment": "",
+      "command": "type",
+      "target": "id=fname",
+      "targets": [
+        ["id=fname", "id"],
+        ["name=fname", "name"],
+        ["css=#fname", "css:finder"],
+        ["xpath=//input[@id='fname']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[3]/div/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "Steven"
+    }, {
+      "id": "4c4cfae4-ee58-4590-82db-df8add99e7b4",
+      "comment": "",
+      "command": "type",
+      "target": "id=lname",
+      "targets": [
+        ["id=lname", "id"],
+        ["name=lname", "name"],
+        ["css=#lname", "css:finder"],
+        ["xpath=//input[@id='lname']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[3]/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Montoya"
+    }, {
+      "id": "3e213449-74ef-430b-8ded-0f9d6e318551",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(10)",
+      "targets": [
+        ["css=input:nth-child(10)", "css:finder"],
+        ["xpath=//input[@value='Submit']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[3]/div/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win2030",
+      "windowTimeout": 2000
+    }, {
+      "id": "4c0e731c-af5b-4337-8716-8b1791009afd",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win2030}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1449aca-880e-4452-b09f-ba95b8bcec5b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=p:nth-child(6)",
+      "targets": [
+        ["css=p:nth-child(6)", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'The server has processed your input and returned this answer.')]", "xpath:innerText"]
+      ],
+      "value": "The server has processed your input and returned this answer."
+    }]
+  }],
+  "suites": [{
+    "id": "b1f79f2b-786a-4ed6-90c3-637277103ea8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["19371c14-0886-4f92-b567-e9f5910cdf87"]
+  }],
+  "urls": ["https://www.w3schools.com/"],
+  "plugins": []
+}
